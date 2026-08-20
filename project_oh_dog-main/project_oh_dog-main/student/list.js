@@ -7,7 +7,23 @@ const smallThum = document.querySelectorAll('.small_thum img');
 const bigThum = document.querySelectorAll('.big_thum img');
 console.log(smallThum, bigThum);
 
+smallThum[0].addEventListener('mouseover',()=>{
+    bigThum.src = smallThum[0].src;
+})
+smallThum[1].addEventListener('mouseover',()=>{
+    bigThum.src = smallThum[1].src;
+})
+//======================================================
 
+function thumFunc(target1, target2){
+    return target1.src = target2.src;
+}
+smallThum[0].addEventListener('mouseover',()=>{
+    thumFunc(bigThum, smallThum[0])
+})
+smallThum[1].addEventListener('mouseover',()=>{
+    thumFunc(bigThum, smallThum[1])
+})
 
 //2.---------------------------함수
 //3.---------------------------이벤트
