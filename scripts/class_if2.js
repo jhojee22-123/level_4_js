@@ -21,11 +21,15 @@ btn1.addEventListener('click',()=>{
     if(userIdInput.value ==''){//조건이 참일 때 실행결과
         pTag.classList.add('error');
         pTag.innerHTML = '<em>아이디</em>를 입력하세요';
-    }
-    if(){
+    }else{/* (앞)조건이 거짓일 때 실행결과 */
         pTag.classList.remove('error');
         pTag.innerHTML = '<em>로그인</em> 성공하셨습니다';
     }
+    //if(userIdInput.value !=''){}
+    // if(Boolean(userIdInput.value)){
+    //     pTag.classList.remove('error');
+    //     pTag.innerHTML = '<em>로그인</em> 성공하셨습니다';
+    // }
     // pTag.classList.add('error');
     // pTag.innerHTML = '<em>로그인</em>이 실패했습니다';
     // pTag.textContent = '<em>로그인</em>이 실패했습니다';

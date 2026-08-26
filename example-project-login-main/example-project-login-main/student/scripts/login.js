@@ -42,7 +42,7 @@ const non_userId = document.querySelector('#non-user-id');
 const non_userOrder = document.querySelector('#non-user-order');
 const non_userPw = document.querySelector('#non-user-pw');
 const non_memberLoginBtn = document.querySelector('#non-member-login');
-
+const non_pwVisibleBtn = document.querySelector('#non-member-pw-visible2');
 console.log(non_userId, non_userOrder, non_userPw, non_memberLoginBtn); //변수 테스트
 
 /* non_memberLoginBtn.addEventListener('click',()=>{
@@ -113,4 +113,12 @@ pwVisibleBtn.addEventListener('click',()=>{
         userPw.type = 'text' :   userPw.type = 'password';
     pwVisibleStatus = !pwVisibleStatus;
 
+})
+//비회원 주문 비밀번호
+let non_pwVisibleStatus = 0; //초기 숨김상태
+non_pwVisibleBtn.addEventListener('click',()=>{
+    non_pwVisibleStatus == 0 ?
+        non_userPw.type = 'text'
+        : non_userPw.type = 'password';
+    non_pwVisibleStatus = !non_pwVisibleStatus;
 })
