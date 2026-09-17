@@ -269,6 +269,23 @@
             }
         })
 
+        //타이머 함수 기초 연습
+        const timer1 = setTimeout(()=>{
+            console.log('실행문구');
+            // alert('이 웹사이트는 포트폴리오용입니다.')
+        },1000)
+
+        //1.5초 지날 때마다 무한 반복실행(clearInterval 종료가능)
+        const timer2 = setInterval(()=>{
+            console.log('반복 실행문구');
+        },1500)
+
+        setTimeout(()=>{
+            console.log('반복 정지');
+            clearInterval(timer2);
+        },5000)
+
+
         // 웹브라우저 스크롤 복원 기능 리셋하고 위에서 시작하기
         if ('scrollRestoration' in history) { history.scrollRestoration = 'manual';}
         window.addEventListener('load', () => {
